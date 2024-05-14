@@ -1,0 +1,13 @@
+{% for product in products %}
+    <div>
+        <h3>{{ product.title }}</h3>
+        <p>Description: {{ product.description }}</p>
+        <p>Price: ${{ product.price }}</p>
+        <!-- Display image if needed -->
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        {% endif %}
+    </div>
+{% empty %}
+    <p>No products found.</p>
+{% endfor %}

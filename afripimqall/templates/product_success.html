@@ -1,0 +1,16 @@
+<!-- success_message.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+    <h1>Success</h1>
+    <p>Your product has been successfully added!</p>
+    <p>Click below to view the product:</p>
+    <a href="{% url 'product_detail' product_id=product.id %}">View Product</a>
+
+
+</body>
+</html>

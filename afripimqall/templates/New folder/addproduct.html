@@ -1,0 +1,532 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-static/assets-path="static/assets/"
+  data-template="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Add product </title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="static/assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="static/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="static/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="static/assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="static/assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="static/assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+       
+
+
+         <!-- Menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme shadow " style="background-image: url(static/assets/img/fr.jpg); background-repeat: no-repeat; background-size:cover;">
+          <div class="app-brand demo">
+            <a href="dashboard.html" class="app-brand-link">
+             
+              <span class="app-brand-text demo menu-text fw-bold ms-2">Afripimall</span>
+              
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none text-white">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item ">
+              <a href="dashboard.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle text-warning"></i>
+                <div data-i18n="Analytics">Dashboard</div>
+                
+              </a>
+            </li>
+
+            <!-- Layouts -->
+            <li class="menu-item text-warning">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout text-warning"></i>
+                <div data-i18n="Layouts">Products</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="inventory.html" class="menu-link text-warning ">
+                    <div data-i18n="Without menu">My Inventory</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="addcategory.html" class="menu-link text-warning">
+                    <div data-i18n="Without navbar">Add categories</div>
+                  </a>
+                </li>
+                <li class="menu-item active">
+                  <a href="addproduct.html" class="menu-link text-warning">
+                    <div data-i18n="Container">Add a product</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="creategift.html" class="menu-link text-warning">
+                    <div data-i18n="Fluid">Create a gift card</div>
+                  </a>
+                </li>
+             
+              </ul>
+            </li>
+
+
+
+
+            <!--  Orders  -->
+            <li class="menu-item">
+              <a href="orders.html" class="menu-link text-warning">
+                <i class="menu-icon tf-icons bx bx-table"></i>
+                <div data-i18n="Tables">Orders</div>
+              </a>
+            </li>
+
+           
+           
+            
+           
+           
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle ">
+                <i class="menu-icon tf-icons bx bx-cube-alt text-warning"></i>
+                <div data-i18n="Misc">Wallet</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="" class="menu-link">
+                    <div data-i18n="Error">My Wallets</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="misc-under-maintenance.html" class="menu-link">
+                    <div data-i18n="Under Maintenance">Top Up my wallet</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <!-- User Components -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Members Area</span></li>
+            <!-- Cards -->
+            <li class="menu-item">
+              <a href="user.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user text-warning"></i>
+                <div data-i18n="Basic">Members</div>
+              </a>
+            </li>
+
+
+
+
+            <!-- User interface -->
+             <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top text-warning"></i>
+                <div data-i18n="Account Settings">Account Settings</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="account-settings-account.html" class="menu-link text-warning">
+                    <div data-i18n="Account">My profile</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="account-settings-notifications.html" class="menu-link text-warning">
+                    <div data-i18n="Notifications">Notifications</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="auth-forgot-password.html" class="menu-link text-warning">
+                    <div data-i18n="Connections">Change password</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            
+         
+            <!-- Misc -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
+            <li class="menu-item">
+              <a
+                href="openticket.html"
+                target="_blank"
+                class="menu-link">
+                <i class="menu-icon tf-icons bx bx-support"></i>
+                <div data-i18n="Support">Support</div>
+              </a>
+            </li>
+           
+          </ul>
+        </aside>
+        <!-- / Menu -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar" style="background-image: url(static/assets/img/fr.jpg);">
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Search -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <i class="bx bx-search fs-4 lh-0 text-white"></i>
+                  <input
+                    type="text"
+                    class="form-control border-0 text-white shadow-none ps-1 ps-sm-2" style="background-color: transparent;"
+                    placeholder="Search..."
+                    aria-label="Search..." />
+                </div>
+              </div>
+              <!-- /Search -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+               
+                <!-- User -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar avatar-online">
+                      <img src="static/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar avatar-online">
+                              <img src="static/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-medium d-block">John Afri</span>
+                            <small class="text-muted">Admin</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle">My Profile</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-cog me-2"></i>
+                        <span class="align-middle">Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="d-flex align-items-center align-middle">
+                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
+                          <span class="flex-grow-1 align-middle ms-1">Billing</span>
+                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="javascript:void(0);">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ User -->
+              </ul>
+            </div>
+          </nav>
+
+          <!-- / Navbar -->
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl col-8 flex-grow-1 container-p-y">
+              <h4 class="py-3 mb-4"><span class="text-muted fw-light">Afripimall/</span> Add product</h4>
+
+              <!-- Basic Layout -->
+              <div class="row">
+                <div class="col-xl">
+                  <div class="card shadow mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center" style="background-image: url(static/assets/img/fr.jpg)">
+                      <h5 class="mb-0 text-warning  "><i class="bx bx-plus-circle me-1 text-warning"></i> add a new product</h5>
+                      <small class="text-muted float-end"></small>
+                    </div>
+                    
+                    <div class="card-body mt-5">
+                      <form>
+                        <div class="mb-3">
+                    
+                            <label class="form-label" for="product-image">Product Image</label>
+                            <input type="file" class="form-control shadow" style="border:none;" id="product-image" accept="image/*" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-fullname">Product name</label>
+                          <input type="text" class="form-control shadow" style="border:none;" id="basic-default-fullname" placeholder="" />
+                           <div class="form-text">Here is the link: <a href="">https://afripimall.com/[link of the product]</a>
+
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+</svg></div>
+
+                        </div>
+                        
+                        <div>
+                        
+
+
+                        <div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-email">Regular Price</label>
+                          <div class="input-group input-group-merge">
+                            <input
+                              type="text"
+                              id="basic-default-email"
+                              class="form-control shadow" style="border:none;"
+                              placeholder="How much is your product?"
+                              aria-label=""
+                              aria-describedby="basic-default-email2" />
+                            <span class="input-group-text text-white" id="basic-default-email2" style="background-image: url(static/assets/img/back2.png);">USD</span>
+                          </div>
+                        </div>
+
+
+
+                           <div class="mb-3">
+                          <label class="form-label" for="basic-default-email">Discount Price</label>
+                          <div class="input-group input-group-merge">
+                            <input
+                              type="text"
+                              id="basic-default-email"
+                              class="form-control shadow" style="border: none;"
+                              placeholder="Discounted price"
+                              aria-label=""
+                              aria-describedby="basic-default-email2" />
+                            <span class="input-group-text text-white" id="basic-default-email2" style="background-image: url(static/assets/img/back2.png);">USD</span>
+                          </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-phone">Category</label>
+                        <select class="form-select shadow" style="border:none;" aria-label="Default select example">
+                              <option selected>Home Appliance</option>
+                              <option value="1">Freezer</option>
+                              <option value="2">Clothes</option>
+                              <option value="3">Scooter</option>
+                              <option value="3">kitchen utensils</option>
+                              <option value="3">Men wears</option>
+                              <option value="3">Women wears</option>
+                              <option value="3">Groceries</option>
+                              <option value="3">Computer & Gadgets</option>
+                            </select>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-message">Short Product description</label>
+                          <textarea
+                            id="short-product-description"
+                            class="form-control shadow" rows="8" cols="40" style="border: none;"
+                            placeholder=""></textarea>
+                        </div>
+
+
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-message">Long Product description</label>
+                          <textarea
+                            id="long-product-description"
+                            class="form-control shadow flex-row" rows="12" cols="50" style="border: none;"
+                            placeholder=""></textarea>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-warning shadow mt-2"><i class="bx bx-check-circle"></i>Publish the product</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- / Content -->
+
+             <!-- Footer Afripimall -->
+              <section id="component-footer">
+                <footer class="footer bg-light">
+                  <div
+                    class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-3">
+                    <div>
+                      <a
+                        href=""
+                        target="_blank"
+                        class="footer-text fw-bold"
+                        >Afripimall</a
+                      >
+                      ©
+                    </div>
+                    <div>
+                      <div class="form-check form-control-sm footer-link me-3">
+                        <input class="form-check-input" type="checkbox" value="" id="customCheck2" checked />
+                        <label class="form-check-label" for="customCheck2"> Show </label>
+                      </div>
+                      <div class="dropdown dropup footer-link me-3">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          Currency
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-dollar"></i> USD</a>
+                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-euro"></i> Euro</a>
+                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-pound"></i> Pi</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-bitcoin"></i> Bitcoin</a>
+                        </div>
+                      </div>
+                      <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger"
+                        ><i class="bx bx-log-out-circle me-1"></i>Logout</a
+                      >
+                    </div>
+                  </div>
+                </footer>
+              </section>
+              <!--/ Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+  
+
+    <!-- Core JS -->
+    <!-- build:js static/assets/vendor/js/core.js -->
+
+    <script src="static/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="static/assets/vendor/libs/popper/popper.js"></script>
+    <script src="static/assets/vendor/js/bootstrap.js"></script>
+    <script src="static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="static/assets/vendor/js/menu.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="static/assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
