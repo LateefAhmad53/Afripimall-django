@@ -1,0 +1,11 @@
+<!-- category_list.html -->
+<h1>All Categories</h1>
+<ul>
+    {% for category in categories %}
+        {% if category.should_open_in_new_tab %}
+            <li><a href="{% url 'category_detail' pk=category.pk %}" target="_blank">{{ category.name }}</a></li>
+        {% else %}
+            <li><a href="{% url 'category_detail' pk=category.pk %}">{{ category.name }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

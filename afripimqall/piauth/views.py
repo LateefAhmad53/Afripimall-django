@@ -237,3 +237,17 @@ def product_success(request, product_id,):
     product = get_object_or_404(Product, pk=product_id)
     # You may also perform additional logic here, such as checking permissions or adding view counts
     return render(request, 'product_success.html', {'product': product})
+
+
+
+from django.shortcuts import render, get_object_or_404
+from .models import Category, Product
+
+def category_list(request):
+    categories = Category.objects.all()
+    return render(request, 'category_list.html', {'categories': categories})
+
+def category_detail(request, pk):
+    category = get_object_or_404(Category, pk=pk)
+    products = Product.objects.filter(category=category)
+    return render(request, 'category_detail.html', {'category': category, 'products': products})

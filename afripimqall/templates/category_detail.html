@@ -1,0 +1,7 @@
+<!-- category_detail.html -->
+<h1>{{ category.name }}</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }}</li>
+    {% endfor %}
+</ul>
